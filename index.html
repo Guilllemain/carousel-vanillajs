@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript carousel</title>
+    <script src="main.js" defer></script>
+
+    <style>
+      .carousel__item__product {
+        width: 500px;
+        height: 200px;
+        background-color: lightgrey;
+        border: darkgrey 1px solid;
+        margin: 1rem;
+        text-align: center;
+      }
+      .carousel {
+        position: relative;
+      }
+      .carousel__container {
+        display: flex;
+        overflow: hidden;
+        transition: transform .3s ease-in-out;
+      }
+      .carousel__next::before {
+        content: "next"
+      }
+      .carousel__prev::before {
+        content: "prev"
+      }
+    </style>
+  </head>
+  <body>
+    <div id="carousel">
+      <div class="carousel__item__product">1</div>
+      <div class="carousel__item__product">2</div>
+      <div class="carousel__item__product">3</div>
+      <div class="carousel__item__product">4</div>
+      <div class="carousel__item__product">5</div>
+    </div>
+  </body>
+</html>
