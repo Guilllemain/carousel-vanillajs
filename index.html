@@ -14,12 +14,18 @@
         margin: 1rem;
         text-align: center;
       }
+      .carousel__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       .carousel {
         position: relative;
+        overflow: hidden;
+        outline: none;
       }
       .carousel__container {
         display: flex;
-        overflow: hidden;
         transition: transform .3s ease-in-out;
       }
       .carousel__next::before {
@@ -32,6 +38,24 @@
       .carousel__prev::before {
         content: "prev"
       }
+      .carousel__pagination {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .pagination__button {
+        background-color: black;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .pagination__button--active, .pagination__button:hover {
+        background-color: #fff;
+        transform: scale(1.4);
+      }
     </style>
   </head>
   <body>
@@ -41,6 +65,7 @@
       <div class="carousel__item__product">3</div>
       <div class="carousel__item__product">4</div>
       <div class="carousel__item__product">5</div>
+      <div class="carousel__item__product">6</div>
     </div>
   </body>
 </html>
